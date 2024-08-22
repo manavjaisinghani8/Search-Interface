@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #5eadfc;
+}
+.dropdown {
+    position: relative;
+    margin-right: 10px;
+}
+
+.dropdown-btn {
+    background-color:  #aa0eb6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px 0 0 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.dropdown-btn:hover {
+    background-color:  #66086c;
+}
+
+.dropdown-btn .arrow {
+    margin-left: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    min-width: 200px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #007bff;
+}
+
+.dropdown-content.show {
+    display: block;
+    opacity: 1;
+}
+
+.search-input {
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    outline: none;
+    border-radius: 0;
+    flex-grow: 1;
+    transition: border-color 0.3s;
+}
+
+.search-input:focus {
+    border-color:  #aa0eb6;
+}
+
+.search-button {
+    background-color:  #aa0eb6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 0 30px 30px 0;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color:  #66086c;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-input {
+        margin-bottom: 10px;
+    }
+
+    .search-button {
+        width: 100%;
+    }
+}
